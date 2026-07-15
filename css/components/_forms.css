@@ -1,0 +1,111 @@
+/* =============================================================================
+   FORMS — sistema de formulários
+============================================================================= */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form__label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-gray-700);
+}
+
+.form__input,
+.form__textarea {
+  padding: 13px 16px;
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-gray-800);
+  background: var(--color-white);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+  outline: none;
+  width: 100%;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: var(--color-gray-400);
+}
+
+.form__input:hover,
+.form__textarea:hover {
+  border-color: var(--color-gray-400);
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  border-color: var(--color-brand-main);
+  box-shadow: 0 0 0 3px rgba(42, 122, 59, 0.12);
+}
+
+/* Estado de erro */
+.form__input--error,
+.form__textarea--error {
+  border-color: var(--color-error);
+}
+.form__input--error:focus,
+.form__textarea--error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.form__error-msg {
+  font-size: var(--text-xs);
+  color: var(--color-error);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* Feedback de sucesso */
+.form__feedback {
+  display: none;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+.form__feedback--success {
+  background: var(--color-brand-pale);
+  color: var(--color-brand-dark);
+  border: 1.5px solid var(--color-brand-main);
+}
+.form__feedback--error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1.5px solid var(--color-error);
+}
+.form__feedback.is-visible { display: flex; }
+
+/* Wrap do formulário */
+.form-wrap {
+  background: var(--color-gray-50);
+  border-radius: var(--radius-md);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-100);
+}

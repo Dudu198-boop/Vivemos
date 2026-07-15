@@ -1,0 +1,101 @@
+/* =============================================================================
+   CONTACT — secção de contacto com formulário
+============================================================================= */
+
+.contact {
+  padding: var(--section-py) 0;
+  background: var(--color-white);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: var(--space-20);
+  align-items: start;
+}
+
+/* --- Info side --- */
+.contact__title {
+  font-size: clamp(var(--text-2xl), 3vw, var(--text-4xl));
+  color: var(--color-brand-dark);
+  margin-bottom: var(--space-4);
+  font-weight: 800;
+  line-height: var(--leading-snug);
+}
+
+.contact__intro {
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-8);
+  font-size: var(--text-base);
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-bottom: var(--space-8);
+}
+
+.contact__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.contact__item-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--color-brand-pale);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand-main);
+  font-size: var(--text-base);
+  flex-shrink: 0;
+}
+
+.contact__item-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-gray-800);
+  margin-bottom: var(--space-1);
+}
+
+.contact__item-value {
+  color: var(--color-gray-600);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+}
+
+/* --- Social --- */
+.contact__social {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.contact__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-brand-pale);
+  color: var(--color-brand-main);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  transition:
+    background var(--transition),
+    color var(--transition),
+    transform var(--duration-fast) var(--ease-spring);
+}
+
+.contact__social-link:hover {
+  background: var(--color-brand-main);
+  color: var(--color-white);
+  transform: translateY(-3px);
+}

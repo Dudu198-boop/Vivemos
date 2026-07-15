@@ -1,0 +1,93 @@
+/* =============================================================================
+   BUTTONS — sistema de botões escalável
+============================================================================= */
+
+/* --- Base --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  letter-spacing: 0.03em;
+  line-height: 1;
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition:
+    background-color var(--transition),
+    border-color var(--transition),
+    color var(--transition),
+    transform var(--duration-fast) var(--ease-spring),
+    box-shadow var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Hover lift — aplicado apenas onde faz sentido */
+.btn:not(:disabled):hover { transform: translateY(-2px); }
+.btn:not(:disabled):active { transform: translateY(0); }
+
+/* --- Variantes --- */
+.btn--primary {
+  background: var(--color-brand-main);
+  color: var(--color-white);
+  border-color: var(--color-brand-main);
+}
+.btn--primary:not(:disabled):hover {
+  background: var(--color-brand-dark);
+  border-color: var(--color-brand-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+.btn--outline:not(:disabled):hover {
+  background: var(--color-white);
+  color: var(--color-brand-dark);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-brand-main);
+  border-color: transparent;
+  padding-inline: var(--space-4);
+}
+.btn--ghost:not(:disabled):hover {
+  background: var(--color-brand-pale);
+}
+
+.btn--accent {
+  background: var(--color-brand-bright);
+  color: var(--color-white);
+  border-color: var(--color-brand-bright);
+}
+.btn--accent:not(:disabled):hover {
+  background: var(--color-brand-dark);
+  border-color: var(--color-brand-dark);
+}
+
+/* --- Tamanhos --- */
+.btn--sm { padding: 10px 22px; font-size: var(--text-xs); }
+.btn--lg { padding: 18px 44px; font-size: var(--text-base); }
+
+/* --- Full width --- */
+.btn--block {
+  width: 100%;
+  border-radius: var(--radius-md);
+  padding-block: var(--space-4);
+}

@@ -1,0 +1,14 @@
+/* =============================================================================
+   INITIATIVES — secção de projectos e iniciativas
+============================================================================= */
+
+.initiatives {
+  padding: var(--section-py) 0;
+  background: var(--color-white);
+}
+
+.initiatives__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}

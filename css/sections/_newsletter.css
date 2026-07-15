@@ -1,0 +1,85 @@
+/* =============================================================================
+   NEWSLETTER — CTA de subscrição
+============================================================================= */
+
+.newsletter {
+  padding: var(--space-20) 0;
+  background: var(--color-white);
+}
+
+.newsletter__inner {
+  background: linear-gradient(135deg, var(--color-brand-dark) 0%, var(--color-brand-main) 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-12) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter__inner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.newsletter__content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--color-white);
+  margin-bottom: var(--space-3);
+}
+
+.newsletter__content p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--text-lg);
+  max-width: 600px;
+  margin: 0 auto var(--space-8);
+}
+
+.newsletter__form {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  gap: var(--space-2);
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter__form input {
+  flex: 1;
+  padding: 16px 24px;
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  outline: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.newsletter__form input:focus {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+.newsletter__form button {
+  padding: 16px 32px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .newsletter__form {
+    flex-direction: column;
+  }
+  .newsletter__form button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,49 @@
+/* =============================================================================
+   QUOTE BANNER — faixa de citação inspiradora
+============================================================================= */
+
+.quote-banner {
+  background: linear-gradient(135deg, var(--color-brand-dark) 0%, var(--color-brand-main) 100%);
+  padding: var(--space-20) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Aspas decorativas de fundo */
+.quote-banner::before {
+  content: '\201C';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22rem;
+  color: rgba(255, 255, 255, 0.05);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.quote-banner blockquote {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-lg), 2.5vw, var(--text-3xl));
+  color: var(--color-white);
+  font-weight: 600;
+  max-width: 800px;
+  margin: 0 auto var(--space-4);
+  line-height: var(--leading-snug);
+  font-style: italic;
+  position: relative;
+  z-index: var(--z-raised);
+}
+
+.quote-banner cite {
+  display: block;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: var(--text-sm);
+  font-style: normal;
+  letter-spacing: var(--tracking-wide);
+  position: relative;
+  z-index: var(--z-raised);
+}

@@ -1,0 +1,55 @@
+/* =============================================================================
+   PARTNERS — secção de colaboradores
+============================================================================= */
+
+.partners {
+  padding: var(--space-20) 0;
+  background: var(--color-gray-50);
+}
+
+.partners__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-4);
+  border: 1.5px solid var(--color-gray-100);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-gray-400);
+  text-align: center;
+  transition:
+    border-color var(--transition),
+    color var(--transition),
+    box-shadow var(--transition),
+    transform var(--duration-fast) var(--ease-spring);
+  cursor: default;
+}
+
+.partner-card:hover {
+  border-color: var(--color-brand-main);
+  color: var(--color-brand-main);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-4px);
+}
+
+.partner-card__icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.partner-card__name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}

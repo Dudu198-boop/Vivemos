@@ -1,0 +1,113 @@
+/* =============================================================================
+   ABOUT — secção "Sobre Nós"
+============================================================================= */
+
+.about {
+  padding: var(--section-py) 0;
+  background: var(--color-white);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-20);
+  align-items: center;
+}
+
+/* --- Imagem --- */
+.about__image-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.about__image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-standard);
+}
+
+.about__image-wrap:hover .about__image {
+  transform: scale(1.04);
+}
+
+.about__badge {
+  position: absolute;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  background: var(--color-brand-main);
+  color: var(--color-white);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  line-height: 1;
+}
+
+.about__badge-label {
+  display: block;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-1);
+}
+
+.about__badge-year {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Decoração de fundo */
+.about__image-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  border: 3px solid var(--color-brand-pale);
+  border-radius: var(--radius-lg);
+  z-index: var(--z-below);
+  transition: inset var(--transition);
+}
+.about__image-wrap:hover::before { inset: -10px; }
+
+/* --- Texto --- */
+.about__title {
+  font-size: clamp(var(--text-2xl), 3vw, var(--text-4xl));
+  color: var(--color-brand-dark);
+  margin-bottom: var(--space-5);
+  line-height: var(--leading-snug);
+  font-weight: 800;
+}
+
+.about__text {
+  color: var(--color-gray-600);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+.about__list {
+  margin: var(--space-6) 0 var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.about__list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-weight: 600;
+  color: var(--color-gray-800);
+  font-size: var(--text-sm);
+}
+
+.about__list-item i {
+  color: var(--color-brand-main);
+  font-size: var(--text-base);
+  flex-shrink: 0;
+}

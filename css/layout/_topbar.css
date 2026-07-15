@@ -1,0 +1,65 @@
+/* =============================================================================
+   TOPBAR — barra de contactos e redes sociais no topo
+============================================================================= */
+
+.topbar {
+  background: var(--color-brand-dark);
+  color: var(--color-white);
+  font-size: var(--text-xs);
+  padding: 10px 0;
+  line-height: 1;
+}
+
+.topbar__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.topbar__contacts {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.topbar__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+}
+
+.topbar__item i {
+  color: var(--color-brand-bright);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.topbar__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.topbar__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.8rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+}
+
+.topbar__social-link:hover {
+  color: var(--color-brand-bright);
+}

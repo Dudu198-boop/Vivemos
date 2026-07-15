@@ -1,0 +1,14 @@
+/* =============================================================================
+   TESTIMONIALS — depoimentos das comunidades
+============================================================================= */
+
+.testimonials {
+  background: linear-gradient(135deg, var(--color-brand-dark) 0%, var(--color-brand-mid) 100%);
+  padding: var(--section-py) 0;
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}

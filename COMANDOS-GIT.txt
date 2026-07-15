@@ -1,0 +1,102 @@
+═══════════════════════════════════════════════════════════════
+    COMANDOS GIT PARA PUBLICAR O SITE VIVEMOS NO GITHUB
+═══════════════════════════════════════════════════════════════
+
+📋 PASSO A PASSO COMPLETO:
+
+1️⃣ CRIAR REPOSITÓRIO NO GITHUB
+   ↓
+   - Acesse: https://github.com/new
+   - Nome: vivemos-website
+   - Descrição: Site institucional da VIVEMOS
+   - Público
+   - NÃO marque "Add README"
+   - Clique em "Create repository"
+
+2️⃣ ABRIR TERMINAL NA PASTA DO PROJETO
+   ↓
+   - Clique com botão direito na pasta "vivemos"
+   - Selecione "Git Bash Here" ou "Abrir no Terminal"
+
+3️⃣ EXECUTAR COMANDOS (copie e cole um por vez):
+
+# Navegar para a pasta
+cd "c:\Users\Windows 10\Documents\vivemos"
+
+# Inicializar Git
+git init
+
+# Configurar usuário (substitua com seus dados)
+git config --global user.name "Seu Nome"
+git config --global user.email "seu.email@exemplo.com"
+
+# Adicionar todos os arquivos
+git add .
+
+# Fazer primeiro commit
+git commit -m "Initial commit: Site VIVEMOS completo"
+
+# Conectar ao GitHub (substitua SEU-USUARIO pelo seu username)
+git remote add origin https://github.com/SEU-USUARIO/vivemos-website.git
+
+# Renomear branch para main
+git branch -M main
+
+# Enviar para GitHub
+git push -u origin main
+
+═══════════════════════════════════════════════════════════════
+
+🔐 SE PEDIR SENHA:
+   - Username: seu nome de usuário do GitHub
+   - Password: use um Personal Access Token (não a senha)
+   
+   Como criar token:
+   1. GitHub → Settings → Developer settings
+   2. Personal access tokens → Tokens (classic)
+   3. Generate new token
+   4. Marque "repo"
+   5. Generate e copie o token
+
+═══════════════════════════════════════════════════════════════
+
+🌐 ATIVAR GITHUB PAGES:
+   
+   1. No repositório, vá em Settings
+   2. Clique em "Pages" no menu lateral
+   3. Em "Source", selecione:
+      - Branch: main
+      - Folder: / (root)
+   4. Salvar
+   
+   Seu site estará em:
+   https://SEU-USUARIO.github.io/vivemos-website/
+
+═══════════════════════════════════════════════════════════════
+
+📝 COMANDOS PARA FUTURAS ATUALIZAÇÕES:
+
+# Ver status dos arquivos
+git status
+
+# Adicionar mudanças
+git add .
+
+# Fazer commit
+git commit -m "Descrição das mudanças"
+
+# Enviar para GitHub
+git push
+
+═══════════════════════════════════════════════════════════════
+
+✅ TUDO PRONTO!
+
+Arquivos criados:
+✓ .gitignore (ignora arquivos desnecessários)
+✓ README.md (documentação do projeto)
+✓ GITHUB-SETUP.md (guia detalhado)
+✓ setup-github.bat (script automatizado)
+✓ COMANDOS-GIT.txt (este arquivo)
+
+═══════════════════════════════════════════════════════════════
