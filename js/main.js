@@ -12,9 +12,11 @@ import { initInteractiveMap } from './modules/interactiveMap.js';
 import { initBackToTop }   from './modules/backToTop.js';
 import { initPreloader }   from './modules/preloader.js';
 import { initNewsletter }  from './modules/newsletter.js';
+import { initI18n }        from './modules/i18n.js';
 
 function init() {
   initNavbar();
+  initI18n();        // deve correr logo após o navbar estar no DOM
   initScrollReveal();
   initCounters();
   initContactForm();

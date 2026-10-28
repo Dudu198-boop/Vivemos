@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
   <meta name="description"
-    content="VIVEMOS – Viver Verde Moçambique. Promovendo soluções tecnológicas agrárias e florestais resilientes às mudanças climáticas." />
+    content="VIVEMO – Viver Verde Moçambique. Promovendo soluções tecnológicas agrárias e florestais resilientes às mudanças climáticas." />
   <meta name="theme-color" content="#2d8c45" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="VIVEMOS – Viver Verde Moçambique" />
+  <meta property="og:title" content="VIVEMO – Viver Verde Moçambique" />
   <meta property="og:description"
     content="Promovendo soluções sustentáveis para as comunidades rurais de Moçambique." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/images/og-image.jpg" />
 
-  <title>VIVEMOS – Viver Verde Moçambique</title>
+  <title>VIVEMO – Viver Verde Moçambique</title>
 
   <!-- Preconnect para fontes externas -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,7 +42,7 @@
   ================================================================ -->
   <div class="preloader" id="preloader">
     <div class="preloader__spinner"></div>
-    <img src="assets/images/logo.png" alt="VIVEMOS" class="preloader__logo" />
+    <img src="assets/images/logo.png" alt="VIVEMO" class="preloader__logo" />
   </div>
 
   <!-- ================================================================
@@ -61,7 +61,7 @@
         </span>
         <span class="topbar__item">
           <i class="fas fa-envelope" aria-hidden="true"></i>
-          vivemos@vivemos.org.mz
+          vivemo@vivemo.org.mz
         </span>
       </div>
       <div class="topbar__social" aria-label="Redes sociais">
@@ -78,26 +78,51 @@
   ================================================================ -->
   <nav class="navbar" id="navbar" aria-label="Navegação principal">
     <div class="navbar__inner">
-      <a href="#home" class="navbar__logo" aria-label="VIVEMOS – ir para o início">
-        <img src="assets/images/logo.png" alt="VIVEMOS" class="navbar__logo-img" />
+      <a href="#home" class="navbar__logo" aria-label="VIVEMO – ir para o início">
+        <img src="assets/images/logo.png" alt="VIVEMO" class="navbar__logo-img" />
       </a>
 
       <ul class="navbar__links" id="navLinks" role="list">
-        <li role="listitem"><a href="#home" class="navbar__link">Home</a></li>
-        <li role="listitem"><a href="#iniciativas" class="navbar__link">Iniciativas</a></li>
-        <li role="listitem"><a href="#galeria" class="navbar__link">Galeria</a></li>
-        <li role="listitem"><a href="#mapa" class="navbar__link">Onde Actuamos</a></li>
-        <li role="listitem"><a href="#sobre" class="navbar__link">Sobre Nós</a></li>
-        <li role="listitem"><a href="#colaboradores" class="navbar__link">Colaboradores</a></li>
-        <li role="listitem"><a href="#contactos" class="navbar__link">Contactos</a></li>
+        <li role="listitem"><a href="#home" class="navbar__link" data-i18n="nav_home">Home</a></li>
+        <li role="listitem"><a href="#sobre" class="navbar__link" data-i18n="nav_about">Sobre Nós</a></li>
+        <li role="listitem"><a href="#servicos" class="navbar__link" data-i18n="nav_services">Serviços</a></li>
+        <li role="listitem"><a href="#iniciativas" class="navbar__link" data-i18n="nav_initiatives">Iniciativas</a></li>
+        <li role="listitem"><a href="#galeria" class="navbar__link" data-i18n="nav_gallery">Galeria</a></li>
+        <li role="listitem"><a href="#mapa" class="navbar__link" data-i18n="nav_map">Onde Actuamos</a></li>
+        <li role="listitem"><a href="#colaboradores" class="navbar__link" data-i18n="nav_partners">Parceiros</a></li>
+        <li role="listitem"><a href="#contactos" class="navbar__link" data-i18n="nav_contact">Contactos</a></li>
+        <li class="navbar__links-lang-mobile" role="listitem">
+          <select class="navbar__lang--mobile" id="langSelectMobile" aria-label="Seleccionar idioma">
+            <option value="pt">🇲🇿 Português</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="it">🇮🇹 Italiano</option>
+            <option value="ar">🇸🇦 العربية</option>
+            <option value="zh">🇨🇳 中文</option>
+            <option value="ru">🇷🇺 Русский</option>
+            <option value="ja">🇯🇵 日本語</option>
+            <option value="sw">🌍 Swahili</option>
+          </select>
+        </li>
       </ul>
 
       <div class="navbar__actions">
-        <select class="navbar__lang" aria-label="Seleccionar idioma">
-          <option value="pt">Português</option>
-          <option value="en">English</option>
+        <select class="navbar__lang" id="langSelect" aria-label="Seleccionar idioma">
+          <option value="pt">🇲🇿 PT</option>
+          <option value="en">🇬🇧 EN</option>
+          <option value="es">🇪🇸 ES</option>
+          <option value="fr">🇫🇷 FR</option>
+          <option value="de">🇩🇪 DE</option>
+          <option value="it">🇮🇹 IT</option>
+          <option value="ar">🇸🇦 AR</option>
+          <option value="zh">🇨🇳 ZH</option>
+          <option value="ru">🇷🇺 RU</option>
+          <option value="ja">🇯🇵 JA</option>
+          <option value="sw">🌍 SW</option>
         </select>
-        <a href="#contactos" class="btn btn--accent btn--sm">Doar</a>
+        <a href="#contactos" class="btn btn--accent btn--sm" data-i18n="nav_donate">Doar</a>
       </div>
 
       <button class="navbar__burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
@@ -114,12 +139,12 @@
   <section class="hero" id="home" aria-label="Cabeçalho principal">
     <div class="hero__overlay" aria-hidden="true"></div>
     <div class="hero__content">
-      <p class="hero__tagline">“Soluções Tecnológicas Inovadoras em Agroflorestas”</p>
-      <h1 class="hero__title"><span class="title-dark">Viver</span> <mark>Verde</mark><br />Moçambique</h1>
-      <p class="hero__subtitle">Construindo um futuro sustentável para as comunidades rurais de Moçambique</p>
+      <p class="hero__tagline" data-i18n="hero_tagline">“Soluções Tecnológicas Inovadoras em Agroflorestas”</p>
+      <h1 class="hero__title"><span class="title-dark" data-i18n="hero_title_1">Viver</span> <mark data-i18n="hero_title_2">Verde</mark><br /><span data-i18n="hero_title_3">Moçambique</span></h1>
+      <p class="hero__subtitle" data-i18n="hero_subtitle">Construindo um futuro sustentável para as comunidades rurais de Moçambique</p>
       <div class="hero__actions">
-        <a href="#sobre" class="btn btn--primary">Conhecer mais</a>
-        <a href="#contactos" class="btn btn--outline">Apoiar a causa</a>
+        <a href="#sobre" class="btn btn--primary" data-i18n="hero_cta1">Conhecer mais</a>
+        <a href="#contactos" class="btn btn--outline" data-i18n="hero_cta2">Apoiar a causa</a>
       </div>
     </div>
     <div class="hero__scroll" aria-hidden="true">
@@ -134,20 +159,16 @@
     <div class="container">
       <div class="numbers__grid">
         <div class="numbers__item">
-          <p class="numbers__value" data-target="10" data-suffix="+">10+</p>
-          <p class="numbers__label">Anos de experiência</p>
-        </div>
-        <div class="numbers__item">
           <p class="numbers__value" data-target="100" data-suffix="+">100+</p>
-          <p class="numbers__label">Famílias beneficiadas</p>
-        </div>
-        <div class="numbers__item">
-          <p class="numbers__value" data-target="7">7</p>
-          <p class="numbers__label">Projectos activos</p>
+          <p class="numbers__label" data-i18n="numbers_families">Famílias beneficiadas</p>
         </div>
         <div class="numbers__item">
           <p class="numbers__value" data-target="3">3</p>
-          <p class="numbers__label">Províncias cobertas</p>
+          <p class="numbers__label" data-i18n="numbers_projects">Projectos activos</p>
+        </div>
+        <div class="numbers__item">
+          <p class="numbers__value" data-target="3">3</p>
+          <p class="numbers__label" data-i18n="numbers_provinces">Províncias cobertas</p>
         </div>
       </div>
     </div>
@@ -159,30 +180,28 @@
   <section class="about" id="sobre">
     <div class="container about__grid">
       <div class="about__image-wrap">
-        <img src="assets/images/history-bg.jpg" alt="Equipa VIVEMOS a capacitar a comunidade no campo"
+        <img src="assets/images/history-bg.jpg" alt="Equipa VIVEMO a capacitar a comunidade no campo"
           class="about__image" loading="lazy" />
         <div class="about__badge" aria-label="Fundada em 2014">
-          <span class="about__badge-label">Desde</span>
+          <span class="about__badge-label" data-i18n="about_badge_label">Desde</span>
           <strong class="about__badge-year">2014</strong>
         </div>
       </div>
 
       <div class="about__text">
-        <span class="section-label">A nossa história</span>
-        <h2 class="about__title">Crescendo com as comunidades desde 2014</h2>
-        <p class="about__text">
-          Começámos como um grupo de jovens engenheiros agrónomos e florestais com uma missão simples: ajudar agricultores a produzir mais e melhor, respeitando o meio ambiente. Hoje, a <strong>VIVEMOS</strong> trabalha em 3 províncias do norte (Nampula, Niassa e Cabo Delgado), capacitando mais de 100 famílias com técnicas práticas que funcionam na vida real.
-        </p>
-        <p class="about__text">
-          O nosso foco vai além da agricultura. Apoiamos mulheres empreendedoras, criamos grupos de poupança e promovemos a igualdade de género. Com 7 projectos activos e mais de 10 anos de experiência, continuamos a crescer junto com as comunidades que servimos.
-        </p>
+        <span class="section-label" data-i18n="about_label">Contextualização e historial</span>
+        <h2 class="about__title" data-i18n="about_title">Uma organização fundada para servir as comunidades rurais</h2>
+        <p class="about__text" data-i18n="about_p1">A <strong>Viver Verde Moçambique (VIVEMO)</strong> é uma organização não governamental moçambicana, apartidária, sem distinção de raça, etnia ou sexo, dedicada à promoção de soluções tecnológicas agrárias e florestais resilientes às mudanças climáticas para as comunidades rurais.</p>
+        <p class="about__text" data-i18n="about_p2">Fundada por jovens moçambicanos em 2014 e registada a 11 de Fevereiro de 2022 por engenheiros agrónomos e florestais com especialidades diversificadas, a VIVEMO goza de personalidade jurídica com autonomia administrativa, financeira e patrimonial, regida por estatutos próprios.</p>
+        <p class="about__text" data-i18n="about_p3">A organização possui todos os órgãos de governação democrática funcionais — Assembleia Geral, Conselhos Fiscal, Consultivo e de Direcção — garantindo boa governação interna e gestão transparente dos recursos. Actualmente actua nas províncias de <strong>Nampula, Niassa e Cabo Delgado</strong>, promovendo soluções tecnológicas agrárias e florestais, acções de género, e programas de poupança e crédito rotativo com grupos de mulheres e associações mistas.</p>
         <ul class="about__list" aria-label="Pilares estratégicos">
-          <li class="about__list-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Formação prática em agricultura sustentável</li>
-          <li class="about__list-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Reflorestação e gestão de recursos naturais</li>
-          <li class="about__list-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Empoderamento económico de mulheres</li>
-          <li class="about__list-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Acesso a microcrédito e poupança comunitária</li>
+          <li class="about__list-item"><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="about_li1">Promoção de cadeias de valor de culturas alimentares e florestais</span></li>
+          <li class="about__list-item"><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="about_li2">Soluções tecnológicas resilientes às mudanças climáticas</span></li>
+          <li class="about__list-item"><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="about_li3">Empoderamento da mulher e igualdade de género</span></li>
+          <li class="about__list-item"><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="about_li4">Gestão sustentável de recursos naturais</span></li>
+          <li class="about__list-item"><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="about_li5">Agroecologia, agricultura orgânica e sequestro de carbono</span></li>
         </ul>
-        <a href="#iniciativas" class="btn btn--primary">Ver iniciativas</a>
+        <a href="#iniciativas" class="btn btn--primary" data-i18n="about_cta">Ver iniciativas</a>
       </div>
     </div>
   </section>
@@ -191,53 +210,103 @@
        MISSÃO / VISÃO / VALORES
   ================================================================ -->
   <section class="mission" aria-label="Missão, Visão e Valores">
-    <div class="container mission__grid">
-      <div class="mission__intro">
-        <span class="section-label">O que nos guia</span>
-        <h2 class="mission__title">Diretrizes que orientam o nosso compromisso</h2>
-        <p class="mission__text">
-          Na VIVEMOS, acreditamos que a inovação agrária e a sustentabilidade ambiental devem caminhar lado a lado com o
-          desenvolvimento social. O nosso compromisso assenta no empoderamento das comunidades rurais e em soluções
-          ecológicas de longo prazo.
-        </p>
+    <div class="container">
+
+      <header class="section-header">
+        <span class="section-label" data-i18n="mission_label">O que nos guia</span>
+        <h2 class="section-header__title" data-i18n="mission_title">Missão, Visão e Valores</h2>
+        <p class="section-header__subtitle" data-i18n="mission_subtitle">Na VIVEMO, acreditamos que a inovação agrária e a sustentabilidade ambiental caminham lado a lado com o desenvolvimento social e o empoderamento das comunidades rurais.</p>
+      </header>
+
+      <!-- Missão + Visão -->
+      <div class="mission__top">
+        <div class="mission-block">
+          <div class="mission-block__icon"><i class="fas fa-bullseye" aria-hidden="true"></i></div>
+          <span class="mission-block__label" data-i18n="mission_label1">Missão</span>
+          <h3 class="mission-block__title" data-i18n="mission_title1">O nosso propósito</h3>
+          <p class="mission-block__text" data-i18n="mission_text1">Promover soluções tecnológicas agrárias e florestais resilientes às mudanças climáticas para as comunidades rurais de Moçambique.</p>
+        </div>
+        <div class="mission-block">
+          <div class="mission-block__icon"><i class="fas fa-eye" aria-hidden="true"></i></div>
+          <span class="mission-block__label" data-i18n="mission_label2">Visão</span>
+          <h3 class="mission-block__title" data-i18n="mission_title2">Para onde vamos</h3>
+          <p class="mission-block__text" data-i18n="mission_text2">Ser líder em soluções tecnológicas agrárias e florestais resilientes às mudanças climáticas em Moçambique e na região.</p>
+        </div>
       </div>
 
-      <div class="mission__items">
-        <div class="mission-card">
-          <div class="mission-card__header">
-            <span class="mission-card__num">01</span>
-            <h3 class="mission-card__title">Missão</h3>
-          </div>
-          <p class="mission-card__text">Promover soluções tecnológicas agrárias e florestais resilientes a mudanças
-            climáticas para as comunidades rurais.</p>
+      <!-- Valores -->
+      <div class="mission__values-wrap">
+        <span class="mission__section-label" data-i18n="mission_values_label">Valores</span>
+        <div class="mission__values">
+          <span class="mission-value-tag" data-i18n="mission_v1">Inovação</span>
+          <span class="mission-value-tag" data-i18n="mission_v2">Transparência</span>
+          <span class="mission-value-tag" data-i18n="mission_v3">Integridade</span>
+          <span class="mission-value-tag" data-i18n="mission_v4">Objectividade</span>
+          <span class="mission-value-tag" data-i18n="mission_v5">Criatividade</span>
+          <span class="mission-value-tag" data-i18n="mission_v6">Compromisso</span>
+          <span class="mission-value-tag" data-i18n="mission_v7">Trabalho por Excelência</span>
+          <span class="mission-value-tag" data-i18n="mission_v8">Honestidade</span>
+          <span class="mission-value-tag" data-i18n="mission_v9">Sustentabilidade</span>
         </div>
+      </div>
 
-        <div class="mission-card">
-          <div class="mission-card__header">
-            <span class="mission-card__num">02</span>
-            <h3 class="mission-card__title">Visão</h3>
+      <!-- Pilares Estratégicos -->
+      <div class="mission__pillars-wrap">
+        <span class="mission__section-label" data-i18n="mission_pillars_label">Pilares Estratégicos</span>
+        <div class="mission__pillars">
+          <div class="mission-pillar">
+            <span class="mission-pillar__num">01</span><p class="mission-pillar__text" data-i18n="mission_p1">Promoção de cadeias de valor de culturas alimentares, de rendimento e florestais</p>
           </div>
-          <p class="mission-card__text">Ser referência na promoção de soluções tecnológicas agrárias e florestais
-            resilientes a mudanças climáticas.</p>
+          <div class="mission-pillar">
+            <span class="mission-pillar__num">02</span><p class="mission-pillar__text" data-i18n="mission_p2">Soluções tecnológicas resilientes às mudanças climáticas</p>
+          </div>
+          <div class="mission-pillar">
+            <span class="mission-pillar__num">03</span><p class="mission-pillar__text" data-i18n="mission_p3">Investimento em práticas de sequestro de carbono no solo</p>
+          </div>
+          <div class="mission-pillar">
+            <span class="mission-pillar__num">04</span><p class="mission-pillar__text" data-i18n="mission_p4">Agroecologia e Agricultura Orgânica</p>
+          </div>
+          <div class="mission-pillar">
+            <span class="mission-pillar__num">05</span><p class="mission-pillar__text" data-i18n="mission_p5">Empoderamento da mulher</p>
+          </div>
+          <div class="mission-pillar">
+            <span class="mission-pillar__num">06</span><p class="mission-pillar__text" data-i18n="mission_p6">Fortalecimento e Desenvolvimento Institucional</p>
+          </div>
+          <div class="mission-pillar">
+            <span class="mission-pillar__num">07</span><p class="mission-pillar__text" data-i18n="mission_p7">Gestão sustentável de recursos naturais</p>
+          </div>
         </div>
+      </div>
 
-        <div class="mission-card">
-          <div class="mission-card__header">
-            <span class="mission-card__num">03</span>
-            <h3 class="mission-card__title">Valores</h3>
-          </div>
-          <div class="mission-card__values">
-            <span class="mission-card__value-tag">Inovação</span>
-            <span class="mission-card__value-tag">Transparência</span>
-            <span class="mission-card__value-tag">Integridade</span>
-            <span class="mission-card__value-tag">Objetividade</span>
-            <span class="mission-card__value-tag">Criatividade</span>
-            <span class="mission-card__value-tag">Compromisso</span>
-            <span class="mission-card__value-tag">Excelência</span>
-            <span class="mission-card__value-tag">Honestidade</span>
-            <span class="mission-card__value-tag">Sustentabilidade</span>
-          </div>
-        </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SERVIÇOS
+  ================================================================ -->
+  <section class="services" id="servicos">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-label" data-i18n="services_label">O que oferecemos</span>
+        <h2 class="section-header__title" data-i18n="services_title">Os nossos serviços</h2>
+        <p class="section-header__subtitle" data-i18n="services_subtitle">Soluções integradas para a agricultura, florestas e desenvolvimento rural sustentável</p>
+      </header>
+      <div class="services__grid">
+        <div class="service-item"><i class="fas fa-leaf" aria-hidden="true"></i><span data-i18n="svc1">Agricultura Orgânica</span></div>
+        <div class="service-item"><i class="fas fa-seedling" aria-hidden="true"></i><span data-i18n="svc2">Agricultura Sustentável</span></div>
+        <div class="service-item"><i class="fas fa-globe-africa" aria-hidden="true"></i><span data-i18n="svc3">Agroecologia</span></div>
+        <div class="service-item"><i class="fas fa-utensils" aria-hidden="true"></i><span data-i18n="svc4">Sistemas Alimentares Resilientes</span></div>
+        <div class="service-item"><i class="fas fa-tree" aria-hidden="true"></i><span data-i18n="svc5">Reflorestamento</span></div>
+        <div class="service-item"><i class="fas fa-cloud" aria-hidden="true"></i><span data-i18n="svc6">Geração de Créditos de Carbono</span></div>
+        <div class="service-item"><i class="fas fa-shield-alt" aria-hidden="true"></i><span data-i18n="svc7">Segurança Alimentar e Nutricional</span></div>
+        <div class="service-item"><i class="fas fa-sun" aria-hidden="true"></i><span data-i18n="svc8">Agricultura vs. Mudanças Climáticas</span></div>
+        <div class="service-item"><i class="fas fa-clipboard-list" aria-hidden="true"></i><span data-i18n="svc9">Planeamento Agropecuário</span></div>
+        <div class="service-item"><i class="fas fa-chart-line" aria-hidden="true"></i><span data-i18n="svc10">Agronegócio</span></div>
+        <div class="service-item"><i class="fas fa-cogs" aria-hidden="true"></i><span data-i18n="svc11">Gestão e Desenvolvimento Agrário</span></div>
+        <div class="service-item"><i class="fas fa-handshake" aria-hidden="true"></i><span data-i18n="svc12">Consultoria Agropecuária</span></div>
+        <div class="service-item"><i class="fas fa-recycle" aria-hidden="true"></i><span data-i18n="svc13">Gestão Ambiental</span></div>
+        <div class="service-item"><i class="fas fa-microscope" aria-hidden="true"></i><span data-i18n="svc14">Pesquisa Agropecuária</span></div>
+        <div class="service-item"><i class="fas fa-people-carry" aria-hidden="true"></i><span data-i18n="svc15">Implementação de Projectos Sociais</span></div>
       </div>
     </div>
   </section>
@@ -248,9 +317,9 @@
   <section class="initiatives" id="iniciativas">
     <div class="container">
       <header class="section-header">
-        <span class="section-label">O que fazemos</span>
-        <h2 class="section-header__title">As nossas iniciativas</h2>
-        <p class="section-header__subtitle">Projectos concretos que transformam vidas e paisagens em Moçambique</p>
+        <span class="section-label" data-i18n="init_label">O que fazemos</span>
+        <h2 class="section-header__title" data-i18n="init_title">As nossas iniciativas</h2>
+        <p class="section-header__subtitle" data-i18n="init_subtitle">Projectos concretos que transformam vidas e paisagens em Moçambique</p>
       </header>
 
       <div class="initiatives__grid">
@@ -258,15 +327,12 @@
           <div class="init-card__image-wrap">
             <img src="assets/images/financas-2.png" alt="Finanças Rurais aos Pequenos Produtores"
               class="init-card__image" loading="lazy" />
-            <span class="init-card__tag">Finanças (2022)</span>
+            <span class="init-card__tag" data-i18n="init1_tag">Finanças (2022)</span>
           </div>
           <div class="init-card__body">
-            <h3 class="init-card__title">Finanças Rurais aos Pequenos Produtores Agrícolas</h3>
-            <p class="init-card__desc">Projecto piloto de Finanças Rurais aos Pequenos Produtores Agrícolas do distrito
-              de Montepuez, província de Cabo Delgado, com vista a contribuir para o incremento de investimento e
-              rendimento nas comunidades rurais da província de Cabo Delgado, através da introdução de esquemas de
-              poupança e crédito rotativo.</p>
-            <a href="#contactos" class="init-card__link">Saber mais <i class="fas fa-arrow-right"
+            <h3 class="init-card__title" data-i18n="init1_title">Finanças Rurais aos Pequenos Produtores Agrícolas</h3>
+            <p class="init-card__desc" data-i18n="init1_desc">Projecto piloto de Finanças Rurais aos Pequenos Produtores Agrícolas do distrito de Montepuez, província de Cabo Delgado, com vista a contribuir para o incremento de investimento e rendimento nas comunidades rurais da província de Cabo Delgado, através da introdução de esquemas de poupança e crédito rotativo.</p>
+            <a href="#contactos" class="init-card__link"><span data-i18n="init_more">Saber mais </span><i class="fas fa-arrow-right"
                 aria-hidden="true"></i></a>
           </div>
         </article>
@@ -275,14 +341,12 @@
           <div class="init-card__image-wrap">
             <img src="assets/images/floresta-2.jpg" alt="Estabelecimento de Florestas Comunitárias"
               class="init-card__image" loading="lazy" />
-            <span class="init-card__tag">Ambiente (2022)</span>
+            <span class="init-card__tag" data-i18n="init2_tag">Ambiente (2022)</span>
           </div>
           <div class="init-card__body">
-            <h3 class="init-card__title">Estabelecimento de Florestas Comunitárias</h3>
-            <p class="init-card__desc">Projecto-piloto conduzido em Rapale, Mecubúri e Ribáuè para consciencializar a
-              comunidade sobre a reversão do acúmulo de CO2 na atmosfera. Consistiu na colheita de sementes, produção de
-              mudas de espécies nativas e fruteiras, e treinamento em implantação de sistemas agroflorestais.</p>
-            <a href="#contactos" class="init-card__link">Saber mais <i class="fas fa-arrow-right"
+            <h3 class="init-card__title" data-i18n="init2_title">Estabelecimento de Florestas Comunitárias</h3>
+            <p class="init-card__desc" data-i18n="init2_desc">Projecto-piloto conduzido em Rapale, Mecubúri e Ribáuè para consciencializar a comunidade sobre a reversão do acúmulo de CO2 na atmosfera. Consistiu na colheita de sementes, produção de mudas de espécies nativas e fruteiras, e treinamento em implantação de sistemas agroflorestais.</p>
+            <a href="#contactos" class="init-card__link"><span data-i18n="init_more">Saber mais </span><i class="fas fa-arrow-right"
                 aria-hidden="true"></i></a>
           </div>
         </article>
@@ -291,14 +355,12 @@
           <div class="init-card__image-wrap">
             <img src="assets/images/horta-1.png" alt="Segurança Alimentar Periurbana" class="init-card__image"
               loading="lazy" />
-            <span class="init-card__tag">Agricultura (2022)</span>
+            <span class="init-card__tag" data-i18n="init3_tag">Agricultura (2022)</span>
           </div>
           <div class="init-card__body">
-            <h3 class="init-card__title">Segurança Alimentar na Comunidade Periurbana</h3>
-            <p class="init-card__desc">Projecto piloto para garantir a disponibilidade de alimentos através de hortas
-              caseiras em zonas com acesso a água. Incluiu treinamentos em produção de fertilizantes orgânicos,
-              biopesticidas e preparação de substrato rico em nutrientes para mudas sadias.</p>
-            <a href="#contactos" class="init-card__link">Saber mais <i class="fas fa-arrow-right"
+            <h3 class="init-card__title" data-i18n="init3_title">Segurança Alimentar na Comunidade Periurbana</h3>
+            <p class="init-card__desc" data-i18n="init3_desc">Projecto piloto para garantir a disponibilidade de alimentos através de hortas caseiras em zonas com acesso a água. Incluiu treinamentos em produção de fertilizantes orgânicos, biopesticidas e preparação de substrato rico em nutrientes para mudas sadias.</p>
+            <a href="#contactos" class="init-card__link"><span data-i18n="init_more">Saber mais </span><i class="fas fa-arrow-right"
                 aria-hidden="true"></i></a>
           </div>
         </article>
@@ -307,13 +369,12 @@
           <div class="init-card__image-wrap">
             <img src="assets/images/biopesticidas-1.jpg" alt="Produção de biopesticidas" class="init-card__image"
               loading="lazy" />
-            <span class="init-card__tag">Agroecologia (2023)</span>
+            <span class="init-card__tag" data-i18n="init4_tag">Agroecologia (2023)</span>
           </div>
           <div class="init-card__body">
-            <h3 class="init-card__title">Produção e Utilização de Biopesticidas</h3>
-            <p class="init-card__desc">Aumento da produtividade de leguminosas usando pesticidas biológicos em Monapo e
-              Meconta, treinando comunidades locais.</p>
-            <a href="#contactos" class="init-card__link">Saber mais <i class="fas fa-arrow-right"
+            <h3 class="init-card__title" data-i18n="init4_title">Produção e Utilização de Biopesticidas</h3>
+            <p class="init-card__desc" data-i18n="init4_desc">Aumento da produtividade de leguminosas usando pesticidas biológicos em Monapo e Meconta, treinando comunidades locais.</p>
+            <a href="#contactos" class="init-card__link"><span data-i18n="init_more">Saber mais </span><i class="fas fa-arrow-right"
                 aria-hidden="true"></i></a>
           </div>
         </article>
@@ -323,14 +384,12 @@
             <img src="assets/images/ovos-1.jpg"
               alt="Assistência técnica na Produção e Comercalização de ovos em Marratane" class="init-card__image"
               loading="lazy" />
-            <span class="init-card__tag">Capacitação (2023)</span>
+            <span class="init-card__tag" data-i18n="init5_tag">Capacitação (2023)</span>
           </div>
           <div class="init-card__body">
-            <h3 class="init-card__title">Assistência Técnica na Produção de Ovos</h3>
-            <p class="init-card__desc">Aumento da renda familiar em Marratane. Beneficiários treinados em dinâmica de
-              grupo, gestão de negócios, literacia financeira e maneio de poedeiras, incluindo construção de aviários e
-              armazenamento.</p>
-            <a href="#contactos" class="init-card__link">Saber mais <i class="fas fa-arrow-right"
+            <h3 class="init-card__title" data-i18n="init5_title">Assistência Técnica na Produção de Ovos</h3>
+            <p class="init-card__desc" data-i18n="init5_desc">Aumento da renda familiar em Marratane. Beneficiários treinados em dinâmica de grupo, gestão de negócios, literacia financeira e maneio de poedeiras, incluindo construção de aviários e armazenamento.</p>
+            <a href="#contactos" class="init-card__link"><span data-i18n="init_more">Saber mais </span><i class="fas fa-arrow-right"
                 aria-hidden="true"></i></a>
           </div>
         </article>
@@ -338,14 +397,12 @@
         <article class="init-card">
           <div class="init-card__image-wrap">
             <img src="assets/images/deslocados.png" alt="Deslocados Internos" class="init-card__image" loading="lazy" />
-            <span class="init-card__tag">Segurança Alimentar (2021-2024)</span>
+            <span class="init-card__tag" data-i18n="init6_tag">Segurança Alimentar (2021-2024)</span>
           </div>
           <div class="init-card__body">
-            <h3 class="init-card__title">Segurança Alimentar para Deslocados</h3>
-            <p class="init-card__desc">Avaliação final de projecto financiado pelo PPM nos distritos de Chiúre e
-              Montepuez. Focado em apoiar deslocados internos com necessidades multiformes organizados em associações e
-              grupos de mulheres.</p>
-            <a href="#contactos" class="init-card__link">Saber mais <i class="fas fa-arrow-right"
+            <h3 class="init-card__title" data-i18n="init6_title">Segurança Alimentar para Deslocados</h3>
+            <p class="init-card__desc" data-i18n="init6_desc">Avaliação final de projecto financiado pelo PPM nos distritos de Chiúre e Montepuez. Focado em apoiar deslocados internos com necessidades multiformes organizados em associações e grupos de mulheres.</p>
+            <a href="#contactos" class="init-card__link"><span data-i18n="init_more">Saber mais </span><i class="fas fa-arrow-right"
                 aria-hidden="true"></i></a>
           </div>
         </article>
@@ -359,16 +416,16 @@
   <section class="gallery" id="galeria">
     <div class="container">
       <header class="section-header">
-        <span class="section-label">O nosso impacto</span>
-        <h2 class="section-header__title">Projectos em Acção</h2>
-        <p class="section-header__subtitle">Explore imagens reais do nosso trabalho com as comunidades.</p>
+        <span class="section-label" data-i18n="gallery_label">O nosso impacto</span>
+        <h2 class="section-header__title" data-i18n="gallery_title">Projectos em Acção</h2>
+        <p class="section-header__subtitle" data-i18n="gallery_subtitle">Explore imagens reais do nosso trabalho com as comunidades.</p>
       </header>
 
       <div class="gallery__filters">
-        <button class="gallery__filter-btn is-active" data-filter="all">Todos</button>
-        <button class="gallery__filter-btn" data-filter="agricultura">Agricultura</button>
-        <button class="gallery__filter-btn" data-filter="reflorestacao">Reflorestação</button>
-        <button class="gallery__filter-btn" data-filter="comunidade">Comunidade</button>
+        <button class="gallery__filter-btn is-active" data-filter="all" data-i18n="gallery_all">Todos</button>
+        <button class="gallery__filter-btn" data-filter="agricultura" data-i18n="gallery_agri">Agricultura</button>
+        <button class="gallery__filter-btn" data-filter="reflorestacao" data-i18n="gallery_reforest">Reflorestação</button>
+        <button class="gallery__filter-btn" data-filter="comunidade" data-i18n="gallery_community">Comunidade</button>
       </div>
 
       <div class="gallery__grid">
@@ -431,11 +488,8 @@
   ================================================================ -->
   <section class="quote-banner" aria-label="Citação inspiradora">
     <div class="container">
-      <blockquote>
-        "A natureza é o nosso maior parceiro. Cada árvore plantada, cada família capacitada, é um passo em direcção a um
-        Moçambique verde e próspero."
-      </blockquote>
-      <cite>— Equipa VIVEMOS</cite>
+      <blockquote data-i18n="quote_text">"A natureza é o nosso maior parceiro. Cada árvore plantada, cada família capacitada, é um passo em direcção a um Moçambique verde e próspero."</blockquote>
+      <cite data-i18n="quote_author">— Equipa VIVEMO</cite>
     </div>
   </section>
 
@@ -445,15 +499,13 @@
   <section class="map-section" id="mapa">
     <div class="container map-section__grid">
       <div class="map-section__content">
-        <span class="section-label">A nossa presença</span>
-        <h2 class="section-header__title">Onde estamos a trabalhar</h2>
-        <p class="map-section__desc">
-          Estamos em 3 províncias do norte de Moçambique. Cada ponto no mapa representa famílias que agora cultivam melhor, poupam mais e acreditam num futuro sustentável.
-        </p>
+        <span class="section-label" data-i18n="map_label">A nossa presença</span>
+        <h2 class="section-header__title" data-i18n="map_title">Onde estamos a trabalhar</h2>
+        <p class="map-section__desc" data-i18n="map_desc">Estamos em 3 províncias do norte de Moçambique. Cada ponto no mapa representa famílias que agora cultivam melhor, poupam mais e acreditam num futuro sustentável.</p>
         <ul class="map-section__stats">
-          <li><strong>3</strong> Províncias abrangidas</li>
-          <li><strong>10+</strong> Distritos parceiros</li>
-          <li><strong>100+</strong> Famílias apoiadas</li>
+          <li><strong>3</strong> <span data-i18n="map_stat1">Províncias abrangidas</span></li>
+          <li><strong>10+</strong> <span data-i18n="map_stat2">Distritos parceiros</span></li>
+          <li><strong>100+</strong> <span data-i18n="map_stat3">Famílias apoiadas</span></li>
         </ul>
       </div>
       <div class="map-section__visual">
@@ -487,73 +539,34 @@
   <section class="partners" id="colaboradores">
     <div class="container">
       <header class="section-header">
-        <span class="section-label">Parceiros</span>
-        <h2 class="section-header__title">Colaboradores e apoiantes</h2>
-        <p class="section-header__subtitle">Trabalhamos com organizações nacionais e internacionais que partilham a
-          nossa visão</p>
+        <span class="section-label" data-i18n="partners_label">Parceiros</span>
       </header>
       <div class="partners__grid">
-        <div class="partner-card"><i class="fas fa-globe partner-card__icon" aria-hidden="true"></i><span
-            class="partner-card__name">INAM</span></div>
-        <div class="partner-card"><i class="fas fa-leaf partner-card__icon" aria-hidden="true"></i><span
-            class="partner-card__name">MITADER</span></div>
-        <div class="partner-card"><i class="fas fa-hands-helping partner-card__icon" aria-hidden="true"></i><span
-            class="partner-card__name">FAO</span></div>
-        <div class="partner-card"><i class="fas fa-seedling partner-card__icon" aria-hidden="true"></i><span
-            class="partner-card__name">IFAD</span></div>
-        <div class="partner-card"><i class="fas fa-university partner-card__icon" aria-hidden="true"></i><span
-            class="partner-card__name">UEM</span></div>
-        <div class="partner-card"><i class="fas fa-building partner-card__icon" aria-hidden="true"></i><span
-            class="partner-card__name">GIZ</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================================
-       DEPOIMENTOS
-  ================================================================ -->
-  <section class="testimonials">
-    <div class="container">
-      <header class="section-header section-header--light">
-        <span class="section-label section-label--light">Impacto real</span>
-        <h2 class="section-header__title">O que dizem as comunidades</h2>
-      </header>
-      <div class="testimonials__grid">
-        <blockquote class="testi-card">
-          <div class="testi-card__stars" aria-label="5 estrelas">★★★★★</div>
-          <p class="testi-card__quote">"Com o apoio da VIVEMOS aprendi a cultivar de forma sustentável. A minha produção melhorou e hoje consigo alimentar melhor a minha família."</p>
-          <footer class="testi-card__author">
-            <div class="testi-card__avatar" aria-hidden="true">F</div>
-            <div>
-              <span class="testi-card__name">Fátima Cossa</span>
-              <span class="testi-card__role">Agricultora, Nampula</span>
-            </div>
-          </footer>
-        </blockquote>
-
-        <blockquote class="testi-card">
-          <div class="testi-card__stars" aria-label="5 estrelas">★★★★★</div>
-          <p class="testi-card__quote">"O programa de reflorestação transformou a nossa aldeia. Hoje temos mais água, mais sombra e muito mais esperança no futuro."</p>
-          <footer class="testi-card__author">
-            <div class="testi-card__avatar" aria-hidden="true">J</div>
-            <div>
-              <span class="testi-card__name">João Machava</span>
-              <span class="testi-card__role">Líder comunitário, Niassa</span>
-            </div>
-          </footer>
-        </blockquote>
-
-        <blockquote class="testi-card">
-          <div class="testi-card__stars" aria-label="5 estrelas">★★★★★</div>
-          <p class="testi-card__quote">"O grupo de poupança mudou tudo. Agora tenho acesso a crédito para investir no meu negócio e ajudo outras mulheres a fazer o mesmo."</p>
-          <footer class="testi-card__author">
-            <div class="testi-card__avatar" aria-hidden="true">M</div>
-            <div>
-              <span class="testi-card__name">Maria Saíde</span>
-              <span class="testi-card__role">Empreendedora, Cabo Delgado</span>
-            </div>
-          </footer>
-        </blockquote>
+        <div class="partner-card">
+          <img src="assets/images/logos/technoserve.png" alt="Alimentarius Consultoria e Serviços"
+            class="partner-card__logo" />
+        </div>
+        <div class="partner-card">
+          <img src="assets/images/logos/bioagro.png" alt="AGRISERVICE, LDA" class="partner-card__logo" />
+        </div>
+        <div class="partner-card">
+          <img src="assets/images/logos/olipa-odes.png" alt="OLIPA-ODES" class="partner-card__logo" />
+          <span class="partner-card__name">OLIPA-ODES</span>
+        </div>
+        <div class="partner-card">
+          <img src="assets/images/logos/UniRovuma.jfif" alt="Universidade Rovuma – CEPROPA"
+            class="partner-card__logo" />
+          <span class="partner-card__name">CEPROPA-CENTRO DE PRODUCAO E PROCESSAMENTO DE ALIMENTOS</span>
+        </div>
+        <div class="partner-card">
+          <img src="assets/images/logos/agriservice.png" alt="BioAgro" class="partner-card__logo" />
+        </div>
+        <div class="partner-card">
+          <img src="assets/images/logos/alimentarius.png" alt="TechnoServe" class="partner-card__logo" />
+        </div>
+        <div class="partner-card">
+          <img src="assets/images/logos/we-effect.jpeg" alt="We Effect" class="partner-card__logo" />
+        </div>
       </div>
     </div>
   </section>
@@ -566,45 +579,44 @@
 
       <!-- Info -->
       <div class="contact__info">
-        <span class="section-label">Fale connosco</span>
-        <h2 class="contact__title">Entre em contacto</h2>
-        <p class="contact__intro">Tem interesse em colaborar, apoiar ou saber mais sobre o nosso trabalho? Estamos
-          disponíveis para conversar.</p>
+        <span class="section-label" data-i18n="contact_label">Fale connosco</span>
+        <h2 class="contact__title" data-i18n="contact_title">Entre em contacto</h2>
+        <p class="contact__intro" data-i18n="contact_intro">Tem interesse em colaborar, apoiar ou saber mais sobre o nosso trabalho? Estamos disponíveis para conversar.</p>
 
         <ul class="contact__list" aria-label="Informações de contacto">
           <li class="contact__item">
             <div class="contact__item-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
             <div>
-              <span class="contact__item-label">Endereço</span>
+              <span class="contact__item-label" data-i18n="contact_address_label">Endereço</span>
               <span class="contact__item-value">Bairro Urbano Central, Rua de Moma, Nampula</span>
             </div>
           </li>
           <li class="contact__item">
             <div class="contact__item-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
             <div>
-              <span class="contact__item-label">Telefone</span>
+              <span class="contact__item-label" data-i18n="contact_phone_label">Telefone</span>
               <span class="contact__item-value">(+258) 843 119 116 / 857 051 895</span>
             </div>
           </li>
           <li class="contact__item">
             <div class="contact__item-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
             <div>
-              <span class="contact__item-label">WhatsApp</span>
+              <span class="contact__item-label" data-i18n="contact_wa_label">WhatsApp</span>
               <span class="contact__item-value">(+258) 857 051 895</span>
             </div>
           </li>
           <li class="contact__item">
             <div class="contact__item-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
             <div>
-              <span class="contact__item-label">Email</span>
-              <span class="contact__item-value">vivemos@vivemos.org.mz<br>eduardo.horacio@vivemos.org.mz</span>
+              <span class="contact__item-label" data-i18n="contact_email_label">Email</span>
+              <span class="contact__item-value">vivemo@vivemo.org.mz<br>eduardo.horacio@vivemo.org.mz</span>
             </div>
           </li>
           <li class="contact__item">
             <div class="contact__item-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
             <div>
-              <span class="contact__item-label">Horário</span>
-              <span class="contact__item-value">Seg – Sex: 8:00 – 17:00</span>
+              <span class="contact__item-label" data-i18n="contact_hours_label">Horário</span>
+              <span class="contact__item-value" data-i18n="contact_hours_val">Seg – Sex: 8:00 – 17:00</span>
             </div>
           </li>
         </ul>
@@ -622,31 +634,30 @@
         <form class="form" id="contactForm" novalidate>
           <div class="form__row">
             <div class="form__group">
-              <label class="form__label" for="nome">Nome</label>
-              <input class="form__input" type="text" id="nome" name="nome" placeholder="O seu nome" required
+              <label class="form__label" for="nome" data-i18n="form_name">Nome</label>
+              <input class="form__input" type="text" id="nome" name="nome" placeholder="O seu nome" data-i18n-ph="form_name_ph" required
                 autocomplete="name" />
             </div>
             <div class="form__group">
-              <label class="form__label" for="email">Email</label>
-              <input class="form__input" type="email" id="email" name="email" placeholder="O seu email" required
+              <label class="form__label" for="email" data-i18n="form_email">Email</label>
+              <input class="form__input" type="email" id="email" name="email" placeholder="O seu email" data-i18n-ph="form_email_ph" required
                 autocomplete="email" />
             </div>
           </div>
 
           <div class="form__group">
-            <label class="form__label" for="assunto">Assunto</label>
-            <input class="form__input" type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem"
+            <label class="form__label" for="assunto" data-i18n="form_subject">Assunto</label>
+            <input class="form__input" type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" data-i18n-ph="form_subject_ph"
               required />
           </div>
 
           <div class="form__group">
-            <label class="form__label" for="mensagem">Mensagem</label>
+            <label class="form__label" for="mensagem" data-i18n="form_message">Mensagem</label>
             <textarea class="form__input form__textarea" id="mensagem" name="mensagem" rows="5"
-              placeholder="Escreva a sua mensagem aqui..." required></textarea>
+              placeholder="Escreva a sua mensagem aqui..." data-i18n-ph="form_message_ph" required></textarea>
           </div>
 
-          <button type="submit" class="btn btn--primary btn--block">
-            Enviar mensagem <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          <button type="submit" class="btn btn--primary btn--block"><span data-i18n="form_submit">Enviar mensagem</span> <i class="fas fa-paper-plane" aria-hidden="true"></i>
           </button>
 
           <div id="formFeedback" class="form__feedback" role="alert" aria-live="polite"></div>
@@ -663,13 +674,12 @@
     <div class="container">
       <div class="newsletter__inner">
         <div class="newsletter__content">
-          <h2>Junte-se à nossa missão</h2>
-          <p>Receba actualizações sobre os nossos projectos e saiba como pode contribuir para um Moçambique mais verde.
-          </p>
+          <h2 data-i18n="newsletter_title">Junte-se à nossa missão</h2>
+          <p data-i18n="newsletter_text">Receba actualizações sobre os nossos projectos e saiba como pode contribuir para um Moçambique mais verde.</p>
         </div>
         <form class="newsletter__form" id="newsletterForm">
-          <input type="email" placeholder="O seu melhor email" required aria-label="Endereço de email" />
-          <button type="submit" class="btn btn--primary">Subscrever</button>
+          <input type="email" placeholder="O seu melhor email" data-i18n-ph="newsletter_ph" required aria-label="Endereço de email" />
+          <button type="submit" class="btn btn--primary" data-i18n="newsletter_btn">Subscrever</button>
         </form>
       </div>
     </div>
@@ -684,8 +694,8 @@
 
         <!-- Brand -->
         <div class="footer__brand">
-          <img src="assets/images/logo.png" alt="VIVEMOS" class="footer__logo" />
-          <p class="footer__brand-text">Promovendo soluções tecnológicas inovadoras em agroflorestas desde 2014.</p>
+          <img src="assets/images/logo.png" alt="VIVEMO" class="footer__logo" />
+          <p class="footer__brand-text" data-i18n="footer_text">Promovendo soluções tecnológicas inovadoras em agroflorestas desde 2014.</p>
           <div class="footer__social" aria-label="Redes sociais">
             <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -696,50 +706,49 @@
 
         <!-- Nav -->
         <div class="footer__col">
-          <h4 class="footer__col-title">Navegação</h4>
+          <h4 class="footer__col-title" data-i18n="footer_nav">Navegação</h4>
           <ul class="footer__links">
-            <li><a href="#home" class="footer__link">Home</a></li>
-            <li><a href="#sobre" class="footer__link">Sobre Nós</a></li>
-            <li><a href="#iniciativas" class="footer__link">Iniciativas</a></li>
-            <li><a href="#galeria" class="footer__link">Galeria</a></li>
-            <li><a href="#mapa" class="footer__link">Onde Actuamos</a></li>
-            <li><a href="#colaboradores" class="footer__link">Colaboradores</a></li>
-            <li><a href="#contactos" class="footer__link">Contactos</a></li>
+            <li><a href="#home" class="footer__link" data-i18n="nav_home">Home</a></li>
+            <li><a href="#sobre" class="footer__link" data-i18n="nav_about">Sobre Nós</a></li>
+            <li><a href="#iniciativas" class="footer__link" data-i18n="nav_initiatives">Iniciativas</a></li>
+            <li><a href="#galeria" class="footer__link" data-i18n="nav_gallery">Galeria</a></li>
+            <li><a href="#mapa" class="footer__link" data-i18n="nav_map">Onde Actuamos</a></li>
+            <li><a href="#colaboradores" class="footer__link" data-i18n="nav_partners">Colaboradores</a></li>
+            <li><a href="#contactos" class="footer__link" data-i18n="nav_contact">Contactos</a></li>
           </ul>
         </div>
 
         <!-- Iniciativas -->
         <div class="footer__col">
-          <h4 class="footer__col-title">Iniciativas</h4>
+          <h4 class="footer__col-title" data-i18n="footer_initiatives">Iniciativas</h4>
           <ul class="footer__links">
-            <li><a href="#iniciativas" class="footer__link">Finanças Rurais</a></li>
-            <li><a href="#iniciativas" class="footer__link">Florestas Comunitárias</a></li>
-            <li><a href="#iniciativas" class="footer__link">Segurança Alimentar</a></li>
-            <li><a href="#iniciativas" class="footer__link">Biopesticidas</a></li>
-            <li><a href="#iniciativas" class="footer__link">Capacitação e Formação</a></li>
+            <li><a href="#iniciativas" class="footer__link" data-i18n="footer_fi1">Finanças Rurais</a></li>
+            <li><a href="#iniciativas" class="footer__link" data-i18n="footer_fi2">Florestas Comunitárias</a></li>
+            <li><a href="#iniciativas" class="footer__link" data-i18n="footer_fi3">Segurança Alimentar</a></li>
+            <li><a href="#iniciativas" class="footer__link" data-i18n="footer_fi4">Biopesticidas</a></li>
+            <li><a href="#iniciativas" class="footer__link" data-i18n="footer_fi5">Capacitação e Formação</a></li>
           </ul>
         </div>
 
         <!-- Contactos -->
         <div class="footer__col">
-          <h4 class="footer__col-title">Contactos</h4>
+          <h4 class="footer__col-title" data-i18n="footer_contacts">Contactos</h4>
           <ul>
             <li class="footer__contact-item"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bairro Urbano
               Central, Nampula</li>
             <li class="footer__contact-item"><i class="fas fa-phone" aria-hidden="true"></i> (+258) 843 119 116</li>
             <li class="footer__contact-item"><i class="fab fa-whatsapp" aria-hidden="true"></i> (+258) 857 051 895</li>
-            <li class="footer__contact-item"><i class="fas fa-envelope" aria-hidden="true"></i> vivemos@vivemos.org.mz
+            <li class="footer__contact-item"><i class="fas fa-envelope" aria-hidden="true"></i> vivemo@vivemo.org.mz
             </li>
           </ul>
-          <a href="#contactos" class="btn btn--accent btn--sm" style="margin-top: 1.25rem; display: inline-flex;">Fazer
-            uma doação</a>
+          <a href="#contactos" class="btn btn--accent btn--sm" style="margin-top: 1.25rem; display: inline-flex;" data-i18n="footer_donate">Fazer uma doação</a>
         </div>
 
       </div>
 
       <div class="footer__bottom">
-        <p>© 2024-2026 VIVEMOS – Viver Verde Moçambique. Todos os direitos reservados.</p>
-        <p>Organização sem fins lucrativos | Moçambique</p>
+        <p data-i18n="footer_copy">© 2024-2026 VIVEMO – Viver Verde Moçambique. Todos os direitos reservados.</p>
+        <p data-i18n="footer_ngo">Organização sem fins lucrativos | Moçambique</p>
       </div>
     </div>
   </footer>

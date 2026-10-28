@@ -26,30 +26,44 @@ export function initNavbar() {
 
   // ── Burger menu ────────────────────────────────────────────────
   if (burger && linksList) {
-    burger.addEventListener('click', () => {
+    burger.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = linksList.classList.toggle('is-open');
       burger.setAttribute('aria-expanded', String(isOpen));
-      // Bloqueia scroll do body quando menu aberto
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+        document.body.classList.add('menu-open');
+      } else {
+        document.body.style.overflow = '';
+        document.body.classList.remove('menu-open');
+      }
     });
 
     // Fecha ao clicar num link
-    linksList.addEventListener('click', (e) => {
-      if (e.target.closest('.navbar__link')) {
+    const links = qsa('.navbar__link');
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
         closeMobileMenu();
-      }
+      });
     });
 
     // Fecha ao clicar fora
     document.addEventListener('click', (e) => {
-      if (!navbar.contains(e.target)) {
+      const isClickInsideMenu = linksList.contains(e.target);
+      const isClickOnBurger = burger.contains(e.target);
+      const isClickOnMobileLang = e.target.closest('.navbar__links-lang-mobile');
+      
+      if (!isClickInsideMenu && !isClickOnBurger && !isClickOnMobileLang && linksList.classList.contains('is-open')) {
         closeMobileMenu();
       }
     });
 
     // Fecha com ESC
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeMobileMenu();
+      if (e.key === 'Escape' && linksList.classList.contains('is-open')) {
+        closeMobileMenu();
+      }
     });
   }
 
@@ -58,6 +72,7 @@ export function initNavbar() {
     linksList.classList.remove('is-open');
     burger?.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    document.body.classList.remove('menu-open');
   }
 
   // ── Active link via IntersectionObserver ───────────────────────
